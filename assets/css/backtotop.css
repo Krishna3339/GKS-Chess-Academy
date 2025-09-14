@@ -1,0 +1,110 @@
+/* Common style for floating buttons */
+.progress-wrap,
+.progress-wrap-wp {
+  position: fixed;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+}
+
+/* Scroll-to-top button */
+.progress-wrap {
+  right: 50px;
+  bottom: 120px; /* separate from WhatsApp icon */
+  background: transparent;
+  box-shadow: inset 0 0 0 2px rgba(95, 58, 252, 0.2);
+}
+
+/* Active state for both buttons */
+.progress-wrap.active-progress,
+.progress-wrap-wp.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Position when active */
+.progress-wrap.active-progress {
+  bottom: 50px;
+}
+.progress-wrap-wp.active-progress {
+  bottom: 120px;
+}
+
+/* FontAwesome icon for scroll-to-top */
+.progress-wrap::after {
+  content: '\f176'; /* up arrow */
+  font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #2c3941;
+  line-height: 46px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  width: 46px;
+}
+
+/* Circular progress path */
+.progress-wrap svg path {
+  fill: none;
+}
+.progress-wrap svg.progress-circle path {
+  stroke: var(--bd-theme-2, #5f3afc); /* fallback color */
+  stroke-width: 4;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+}
+
+/* WhatsApp Button */
+.progress-wrap-wp {
+  right: 50px;
+  bottom: 120px;
+  background-color: #25D366; /* WhatsApp green */
+  padding: 6px;
+}
+
+/* WhatsApp icon styling */
+.progress-wrap-wp svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .progress-wrap,
+  .progress-wrap-wp {
+    right: 15px;
+    height: 40px;
+    width: 40px;
+  }
+  
+  .progress-wrap::after {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+  
+  .progress-wrap.active-progress {
+    bottom: 30px;
+  }
+  .progress-wrap-wp.active-progress {
+    bottom: 90px;
+  }
+}

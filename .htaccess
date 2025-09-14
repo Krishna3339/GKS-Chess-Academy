@@ -1,0 +1,108 @@
+# =============================
+# ENABLE REWRITE ENGINE
+# =============================
+RewriteEngine On
+
+# =============================
+# FORCE HTTPS & REMOVE WWW
+# =============================
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.gkschessacademy\.com [NC]
+RewriteRule ^(.*)$ https://gkschessacademy.com/$1 [L,R=301]
+
+# =============================
+# REDIRECT /index AND /index.php TO ROOT
+# =============================
+RewriteCond %{THE_REQUEST} \s/+(index\.php|index)\s [NC]
+RewriteRule ^(index\.php|index)?$ https://gkschessacademy.com/ [L,R=301]
+
+# =============================
+# SET DEFAULT INDEX
+# =============================
+DirectoryIndex index.php
+
+# =============================
+# REMOVE .PHP EXTENSION
+# =============================
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# =============================
+# BLOCK BAD BOTS
+# =============================
+RewriteCond %{HTTP_USER_AGENT} (HTTrack|Wget|WebCopier|Nutch|Teleport|libwww|SemrushBot|AhrefsBot|MJ12bot|DotBot|BLEXBot|PetalBot|Sogou|Crawler|WebZIP|SiteSnagger|ExtractorPro|libwww-perl|curl|python-requests|python-urllib|Java/1\.|semalt|mail\.ru|scrapy|nikto|winhttp|Xenu|Zeus) [NC]
+RewriteRule .* - [F,L]
+
+# =============================
+# BLOCK ASSETS FOLDER FROM BOTS
+# =============================
+RewriteCond %{HTTP_USER_AGENT} (HTTrack|Wget|WebCopier|Nutch|Teleport) [NC]
+RewriteRule ^assets/.* - [F,L]
+
+# =============================
+# BLOCK REFERRER SPAM
+# =============================
+RewriteCond %{HTTP_REFERER} (semalt\.com|buttons-for-website\.com|social-buttons\.com) [NC]
+RewriteRule ^.* - [F,L]
+
+# =============================
+# BLOCK EMPTY REFERRER (EXCEPT ALLOWED FILES + HOMEPAGE)
+# =============================
+RewriteCond %{HTTP_REFERER} ^$ [NC]
+RewriteRule !^(robots\.txt|sitemap\.xml|favicon\.ico|index\.php|$) - [F,L]
+
+# =============================
+# SECURITY SETTINGS
+# =============================
+Options -Indexes
+
+<FilesMatch "^(\.htaccess|\.env|wp-config\.php|config\.yml|\.gitignore)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    # Remove PHP version info
+    Header unset X-Powered-By
+
+    # Security headers
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always append X-Frame-Options "SAMEORIGIN"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# =============================
+# PERFORMANCE: GZIP COMPRESSION
+# =============================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css text/javascript application/javascript application/json application/xml
+</IfModule>
+
+# =============================
+# PERFORMANCE: BROWSER CACHING
+# =============================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 6 months"
+    ExpiresByType image/jpeg "access plus 6 months"
+    ExpiresByType image/png "access plus 6 months"
+    ExpiresByType image/gif "access plus 6 months"
+    ExpiresByType image/webp "access plus 6 months"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 6 months"
+</IfModule>
+
+# =============================
+# CUSTOM ERROR PAGES
+# =============================
+ErrorDocument 403 /error/403.html
+ErrorDocument 404 /error/404.php

@@ -1,0 +1,7 @@
+User-agent: HTTrack
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://gkschessacademy.com/sitemap.xml

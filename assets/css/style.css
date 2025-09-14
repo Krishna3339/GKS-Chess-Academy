@@ -1,0 +1,17 @@
+.fs-small
+{
+    font-size: 25px !important;
+    text-align: left;
+}
+.text-justify{
+    text-align: justify !important;
+}
+@media only (min-width: 320px) and (max-width: 768px) {
+  .video-map-play {
+    height: auto !important; /* Override vh-100 on mobile */
+  }
+
+  .promotion-content-area {
+    padding-top: 5px !important; /* Remove pt-100 (assuming it's padding-top: 100px) */
+  }
+}
