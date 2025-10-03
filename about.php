@@ -237,15 +237,17 @@ include("Resources/header.php"); ?>
             <ul>
               <li>
                 <div class="bd-promotion-icon">
-                  <i class="flaticon-exclusive theme-bg-2"></i>
+                  <!-- <i class="flaticon-exclusive theme-bg-2"></i> -->
+                  <img src="assets/img/lee/online-chess.png" width="60">
                 </div>
-                <span>Full Day Sessions</span>
+                <span>Online Sessions</span>
               </li>
               <li>
                 <div class="bd-promotion-icon">
-                  <i class="flaticon-whiteboard theme-bg"></i>
+                  <!-- <i class="flaticon-whiteboard theme-bg"></i> -->
+                  <img src="assets/img/lee/offline-chess.png" width="60">
                 </div>
-                <span>Varied Classes</span>
+                <span>Offline Classes</span>
               </li>
             </ul>
           </div>

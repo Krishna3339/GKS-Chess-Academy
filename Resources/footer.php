@@ -262,5 +262,28 @@
    <script src="assets/js/main.js"></script>
    <script src="assets/js/card-slider.js"></script>
    <script src="assets/js/lee-security-wall.js"></script>
+   <script>
+// Reload page if DevTools is opened
+(function() {
+    var devtools = /./;
+    devtools.toString = function() {
+        location.reload(); // Reload when console is opened
+    };
+
+    // Detect key presses for F12, Ctrl+Shift+I, Ctrl+Shift+J
+    document.onkeydown = function(e) {
+        if (
+            e.keyCode == 123 || // F12
+            (e.ctrlKey && e.shiftKey && e.keyCode == 73) || // Ctrl+Shift+I
+            (e.ctrlKey && e.shiftKey && e.keyCode == 74) || // Ctrl+Shift+J
+            (e.ctrlKey && e.keyCode == 85) // Ctrl+U (view source)
+        ) {
+            location.reload();
+            return false;
+        }
+    };
+})();
+</script>
+
 </body>
 </html>

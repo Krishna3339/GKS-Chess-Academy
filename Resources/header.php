@@ -36,7 +36,7 @@
 
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/kiran.png">
+  <link rel="shortcut icon" type="image/png" href="assets/img/logo/Fav-icon.png">
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -57,6 +57,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="assets/js/lee-security-wall.js"></script>
+
+  <!-- Bootstrap 5 -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
   <style>
     img {

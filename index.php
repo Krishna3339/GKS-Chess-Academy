@@ -5,7 +5,18 @@ $pageKeywords = "chess academy India, FIDE chess coaching, online chess classes,
 $pageCanonical = "https://gkschessacademy.com/";
 include("Resources/header.php"); ?>
 <body>
-  <!-- Preloader,  back-to-top, header -->
+  <!-- Preloader -->
+   <!--   <div id="loading">
+      <div id="preloader">
+         <div class="preloader-thumb-wrap">
+            <div class="preloader-thumb">
+               <div class="preloader-border"></div>
+               <img src="assets/img/logo/preloader.png" alt="img not found!" >
+            </div>
+         </div>
+      </div>
+   </div>   -->
+  <!-- back-to-top, header -->
   <?php include("Resources/navbar.php"); ?>
 
   <!-- main area start here  -->

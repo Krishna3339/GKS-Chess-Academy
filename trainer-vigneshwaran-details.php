@@ -1,18 +1,18 @@
 <?php 
 $pageTitle = "Trainer Details | GKS Chess Academy";
 $pageDescription = "Meet the experienced and dedicated trainers of GKS Chess Academy who guide students to master chess with skill and strategy.";
-$pageKeywords = "GKS chess coaches, trainer profiles, chess instructors, GKS Academy teachers";
+$pageKeywords = "GKS chess coaches, trainer profiles, chess instructors, GKS Academy Trainer";
 $pageCanonical = "https://gkschessacademy.com/teacher-details";
 include("Resources/header.php"); 
 
 // Trainer Details
-$tn = 'kiranSundar';
- if($tn == 'Harsh')
+$tn = 'vigneshwaran';
+ if($tn == 'vigneshwaran')
   {
-      $trainerName = "Harsh";
-      $role = "Chess Coach";
-      $image = "assets/img/trainers/Harsh.png";
-      $paragraph="Coach Harsh brings energy, expertise, and dedication to the GKS team, helping young players reach their highest potential in chess and beyond. His coaching style blends traditional and modern techniques for effective learning, emphasizing interactive sessions, personalized attention, and strategic improvement.";
+      $trainerName = "Vigneshwaran S";
+      $role = "National Arbiter";
+      $image = "assets/img/teacher/vigneshwaran.webp";
+      $paragraph="As a National Arbiter, Vigneshwaran brings integrity, precision, and a deep understanding of the game to every tournament he oversees. His role ensures that events are conducted with fairness, transparency, and adherence to FIDE regulations, creating an environment where players can compete at their best.";
   }
 ?>
 <body>
@@ -39,10 +39,10 @@ $tn = 'kiranSundar';
                   <div class="col-xl-10">
                      <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
                         <div class="bd-breadcrumb-content text-center">
-                           <h1 class="bd-breadcrumb-title">Teachers Details</h1>
+                           <h1 class="bd-breadcrumb-title">Trainer Details</h1>
                            <div class="bd-breadcrumb-list">
                               <span><a href="index"><i class="flaticon-hut"></i>GKS</a></span>
-                              <span>Teachers Details</span>
+                              <span>Trainer Details</span>
                            </div>
                         </div>
                      </div>
@@ -75,8 +75,7 @@ $tn = 'kiranSundar';
                         <h3 class="bd-teacher-widget-title"><?php echo $trainerName; ?></h3>
                         <span class="bd-teacher-widget-tag"><?php echo $role; ?></span>
                         <p class="text-justify"><?php echo $paragraph; ?></p>
-                        <p class="text-justify">Observers of the students often note that they are confident, perceptive, caring, and independent—qualities that reflect the trainer’s thoughtful and empowering teaching style, much like the nurturing approach seen in Montessori education. Through chess, trainers foster not only critical thinking but also emotional intelligence and self-reliance in every child they mentor.
-                        </p>
+                        <p class="text-justify">Known for his calm presence and meticulous attention to detail, he fosters a professional yet encouraging atmosphere at the board. Beyond enforcing rules, his contribution lies in supporting players’ growth by maintaining discipline, respect, and sportsmanship throughout the event.</p>
                         <div class="bd-teacher-widget-social">
                            <span>Follow Me:</span>
                            <ul>
@@ -103,7 +102,7 @@ $tn = 'kiranSundar';
                                  <span>87%</span>
                               </div>
                               <div class="progress">
-                                 <div class="progress-bar" role="progressbar" style="width: 97%" aria-valuenow="97"
+                                 <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87"
                                     aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
                            </div>
@@ -113,7 +112,7 @@ $tn = 'kiranSundar';
                                  <span>97%</span>
                               </div>
                               <div class="progress">
-                                 <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87"
+                                 <div class="progress-bar" role="progressbar" style="width: 97%" aria-valuenow="97"
                                     aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
                            </div>
@@ -142,11 +141,11 @@ $tn = 'kiranSundar';
                            </div>
                            <div class="bd-teacher-widget-info">
                               <p>Role:</p>
-                              <p>Founder and International Trainer</p>
+                              <p>National Arbiter</p>
                            </div>
                            <div class="bd-teacher-widget-info">
                               <p>Title:</p>
-                              <p>Head Coach</p>
+                              <p>Senior Coach</p>
                            </div>
                            <div class="bd-teacher-widget-info">
                               <p>Teaching Since:</p>
@@ -166,7 +165,7 @@ $tn = 'kiranSundar';
       <!-- teacher details widget end here-->
 
       <!-- Trainer Achievements Section start here -->
-      <section class="bd-achievements-area pt-50 pb-120">
+      <section class="bd-achievements-area pt-50 pb-120" style="display: none;">
          <div class="container">
             <h2 class="bd-section-title mb-5 text-white text-center">Achievements & Gallery</h2>
             <div class="row">

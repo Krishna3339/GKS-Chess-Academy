@@ -924,9 +924,9 @@ i[class^=flaticon-] {
   width: 260px;
 }
 .preloader-thumb img {
-  width: 200px;
+  width: 400px;
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: img-blink 1s ease-in-out infinite alternate;
@@ -2150,7 +2150,9 @@ i[class^=flaticon-] {
   top: 0;
   height: 100%;
   width: 278px;
-  background-color: var(--bd-theme-6);
+  /*background-color: var(--bd-theme-6);*/
+  /*background-color: #06162c !important;*/
+  background-color: #06162c !important;
   clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);
 }
 [dir=rtl] .bd-header-bottom-clip-shape {

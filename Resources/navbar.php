@@ -1,6 +1,6 @@
 
 <!-- pre loader area start -->
-    <div id="loading">
+ <!--    <div id="loading">
       <div id="preloader">
          <div class="preloader-thumb-wrap">
             <div class="preloader-thumb">
@@ -9,7 +9,7 @@
             </div>
          </div>
       </div>
-   </div>  
+   </div>   -->
    <!-- pre loader area end -->
 
    <!-- back to top start -->
@@ -92,7 +92,7 @@
             <div class="container">
                <div class="mega-menu-wrapper p-relative">
                   <div class="d-flex align-items-center justify-content-between">
-                     <div class="bd-header-logo" style="letter-spacing: 13px;text-align: center; font-size: 35px; font-weight: 600;">
+                     <div class="bd-header-logo" style="letter-spacing: 13px;text-align: center; font-size: 35px; font-weight: 600;" style="display:none;">
                         <a href="index">
                            <img src="assets/img/logo/kiran.png" alt="logo">
                         </a>
@@ -102,13 +102,13 @@
                         <nav id="mobile-menu">
                            <ul>
                               <li>
-                                 <a href="index">Home</a>
+                                 <a href="index.php">Home</a>
                               </li>
                               <li>
-                                 <a href="about">About</a>
+                                 <a href="about.php">About</a>
                               </li>
                               <li class="has-dropdown has-mega-menu">
-                                  <a href="programs">Programs</a>
+                                  <a href="programs.php">Programs</a>
                                   <ul class="mega-menu mega-menu-2">
                                     <li>
                                       <a href="javascript:void(0);" class="d-lg-none">List 1</a>
@@ -123,7 +123,7 @@
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="online-classes" class="mega-program">
+                                          <a href="online-classes.php" class="mega-program">
                                             <div class="mega-menu-2-inner-num"><span>02</span></div>
                                             <div class="mega-menu-2-inner-title">
                                               <h6>Online Classes</h6>
@@ -132,7 +132,7 @@
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="doorstep-coaching" class="mega-program">
+                                          <a href="doorstep-coaching.php" class="mega-program">
                                             <div class="mega-menu-2-inner-num"><span>03</span></div>
                                             <div class="mega-menu-2-inner-title">
                                               <h6>Doorstep Coaching</h6>
@@ -146,7 +146,7 @@
                                       <a href="javascript:void(0);" class="d-lg-none">List 2</a>
                                       <ul>
                                         <li>
-                                          <a href="gated-communities" class="mega-program">
+                                          <a href="gated-communities.php" class="mega-program">
                                             <div class="mega-menu-2-inner-num"><span>04</span></div>
                                             <div class="mega-menu-2-inner-title">
                                               <h6>Gated Communities</h6>
@@ -155,7 +155,7 @@
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="school-programs" class="mega-program">
+                                          <a href="school-programs.php" class="mega-program">
                                             <div class="mega-menu-2-inner-num"><span>05</span></div>
                                             <div class="mega-menu-2-inner-title">
                                               <h6>School Programs</h6>
@@ -164,7 +164,7 @@
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="contest-preparation" class="mega-program">
+                                          <a href="contest-preparation.php" class="mega-program">
                                             <div class="mega-menu-2-inner-num"><span>06</span></div>
                                             <div class="mega-menu-2-inner-title">
                                               <h6>Contest Preparation</h6>
@@ -193,10 +193,10 @@
                                   </ul>
                                 </li>
                                 <li>
-                                 <a href="gallery">Gallery</a>
+                                 <a href="gallery.php">Gallery</a>
                               </li>
                                <li>
-                                 <a href="achievements">Achievements</a>
+                                 <a href="achievements.php">Achievements</a>
                               </li>
                                <!-- <li class="has-dropdown">
                                  <a href="shop">Services</a>
@@ -209,7 +209,7 @@
                                  </ul>
                               </li> -->
                               <li>
-                                 <a href="contact">Contact</a>
+                                 <a href="contact.php">Contact</a>
                               </li>
                            </ul>
                         </nav>

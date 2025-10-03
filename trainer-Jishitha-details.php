@@ -143,11 +143,11 @@ $tn = 'Jishitha';
                            </div>
                            <div class="bd-teacher-widget-info">
                               <p>Role:</p>
-                              <p>Senior Coach</p>
+                              <p>Women Fide Master</p>
                            </div>
                            <div class="bd-teacher-widget-info">
                               <p>Title:</p>
-                              <p>Women Fide Master</p>
+                              <p>Senior Coach</p>
                            </div>
                            <div class="bd-teacher-widget-info">
                               <p>Teaching Since:</p>
